@@ -1,0 +1,30 @@
+.character-classes {
+  margin: 0px;
+  padding: 0px;
+  background-color: darkslategrey;
+}
+
+.character-classes ul {
+  margin: 0 auto;
+  padding: 2px 0px;
+  width: 98%;
+  display: flex;
+}
+
+.classNode {
+  margin: 0px;
+  padding: 0px;
+  width: 10%;
+  list-style-type: none;
+}
+
+.classNode a {
+  margin: 0px;
+  padding: 0px;
+  color: white;
+  text-decoration: none;
+}
+
+.classNode a:hover {
+  color: goldenrod;
+}
