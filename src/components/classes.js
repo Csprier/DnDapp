@@ -12,11 +12,11 @@ class Classes extends Component {
   }
 
   render() {
-    console.log(this.props.classes);
     return (
       <div className="character-classes">
+      <h2>Character classes</h2>
         <ul>
-          {this.props.classes.classes.map((classItem, i) => {
+          {this.props.classes.map((classItem, i) => {
             return (
               <li key={i} className="classNode">
                 <a href={classItem.url}>{classItem.name}</a>
@@ -30,7 +30,7 @@ class Classes extends Component {
 }
 
 const mapStateToProps = state => ({
-  classes: state.characterClasses
+  classes: state.characterClasses.classes
 });
 
 export default connect(mapStateToProps)(Classes);

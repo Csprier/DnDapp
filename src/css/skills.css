@@ -1,0 +1,39 @@
+.skills {
+  /* margin: 0px;
+  padding: 0px;
+  width: 10%;
+  background-color: darkslategrey; */
+}
+
+.skills h2 {
+  /* margin: 0px;
+  padding: 0px;
+  width: 95%;
+  color: white;
+  border-bottom: 1px solid white; */
+}
+
+.skills ul {
+  /* margin: 0 auto;
+  padding: 2px 0px;
+  width: 98%; */
+}
+
+.skillNode {
+  /* display: block;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  list-style-type: none; */
+}
+
+.skillNode a {
+  /* margin: 0px;
+  padding: 0px;
+  color: white;
+  text-decoration: none; */
+}
+
+.skillNode a:hover {
+  color: goldenrod;
+}

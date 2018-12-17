@@ -19,9 +19,6 @@ export const GET_ALL_CHARACTER_CLASSES = 'GET_ALL_CHARACTER_CLASSES',
 export const listAllClasses = () => dispatch => {
   return fetch(`${API_BASE_URL}/classes`, { method: 'GET' })
     .then(res => res.json())
-    .then(data => {
-      // console.log(data.results)
-      dispatch(getAllCharacterClasses(data.results))
-    })
+    .then(data => dispatch(getAllCharacterClasses(data.results)))
     .catch(err => console.error(err));
 };
