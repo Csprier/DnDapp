@@ -1,15 +1,28 @@
-import { REQUEST_CHARACTER_CLASSES } from '../actions/characterClassActions';
+import { REQUEST_CHARACTER_CLASSES, GET_ALL_CHARACTER_CLASSES, REQUEST_CHARACTER_CLASSES_SUCCESS } from '../actions/characterClassActions';
 
-export const initialState = {
+const initialState = {
   classes: [],
-  classObjects: []
+  loading: false
 }
 
 export default function classReducer(state = initialState, action) {
-  if (action.type === REQUEST_CHARACTER_CLASSES) {
-    return {
-      classes: action.results.map(item => item.name)
-    }
+  switch(action.type) {
+    case REQUEST_CHARACTER_CLASSES:
+      return {
+        ...state,
+        loading: true
+      }
+    case REQUEST_CHARACTER_CLASSES_SUCCESS:
+      return {
+        ...state,
+        loading: false
+      }
+    case GET_ALL_CHARACTER_CLASSES:
+      return {
+        classes: action.classes,
+        loading: false
+      }
+    default:
+      return state;
   }
-  return state;
-}
+};

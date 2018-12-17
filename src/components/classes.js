@@ -1,49 +1,36 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { requestCharacterClasses, requestCharacterClassesSuccess, listAllClasses } from '../actions/characterClassActions';
+
 import '../css/classes.css';
 
 class Classes extends Component {
-  constructor() {
-    super();
-    // this.state = {
-    //   isDataLoaded: false,
-    //   classes: [],
-    //   classObjects: []
-    // }
+  componentDidMount() {
+    this.props.dispatch(requestCharacterClasses())
+    this.props.dispatch(listAllClasses())
+    this.props.dispatch(requestCharacterClassesSuccess())
   }
 
-  // componentDidMount() {
-  //   fetch('http://www.dnd5eapi.co/api/classes')
-  //   .then(response => response.json())
-  //   .then(data => {
-  //     let classObjs = data.results.map((classItem, i) => {
-  //       return (
-  //         <li key={i} className='classNode'>
-  //           <a href={classItem.url}>{classItem.name}</a>
-  //         </li>
-  //       );        
-  //     })
-  //     this.setState({
-  //       classes: data.results.map(item => item.name),
-  //       classObjects: classObjs
-  //     })
-  //   })
-  //   .catch(err => {
-  //     console.log(err);
-  //   });
-  // }
-
   render() {
+    console.log(this.props.classes);
     return (
       <div className="character-classes">
         <ul>
-          {/* {this.state.classObjects} */}
+          {this.props.classes.classes.map((classItem, i) => {
+            return (
+              <li key={i} className="classNode">
+                <a href={classItem.url}>{classItem.name}</a>
+              </li>
+            );
+          })}
         </ul>
-        <div className="character-info-display">
-
-        </div>
       </div>
     );
   }
 }
 
-export default Classes;
+const mapStateToProps = state => ({
+  classes: state.characterClasses
+});
+
+export default connect(mapStateToProps)(Classes);
