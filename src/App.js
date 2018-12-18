@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import AbilityScores from './components/abilityScores';
 import Classes from './components/classes';
 import Skills from './components/skills';
+import Languages from './components/languages';
 import Proficiences from './components/proficiencies';
 
 import './App.css';
@@ -18,6 +19,7 @@ class App extends Component {
           <Classes />
           <AbilityScores />
           <Skills />
+          <Languages />
           <Proficiences />
         </main>
       </div>

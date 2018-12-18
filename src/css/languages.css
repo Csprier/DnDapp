@@ -1,0 +1,39 @@
+.languages {
+  /* margin: 0px;
+  padding: 0px;
+  width: 10%;
+  background-color: darkslategrey; */
+}
+
+.languages h2 {
+  /* margin: 0px;
+  padding: 0px;
+  width: 95%;
+  color: white;
+  border-bottom: 1px solid white; */
+}
+
+.languages ul {
+  /* margin: 0 auto;
+  padding: 2px 0px;
+  width: 98%; */
+}
+
+.languageNode {
+  /* display: block;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  list-style-type: none; */
+}
+
+.languageNode a {
+  /* margin: 0px;
+  padding: 0px;
+  color: white;
+  text-decoration: none; */
+}
+
+.languageNode a:hover {
+  color: goldenrod;
+}

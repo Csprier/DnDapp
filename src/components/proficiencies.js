@@ -12,7 +12,6 @@ class Proficiencies extends Component {
   }
 
   render() {
-    console.log('this.props: ', this.props.proficiencies);
     return (
       <div className="proficiencies">
         <h2>Proficiencies</h2>

@@ -15,13 +15,6 @@ export const GET_ALL_PROFICIENCIES = 'GET_ALL_PROFICIENCIES',
 export const listAllProficiencies = () => dispatch => {
   return fetch(`${API_BASE_URL}/proficiencies`, { method: 'GET' })
     .then(res => res.json())
-    .then(data => {
-      let proficiencyData = data.results.map(proficiency => ({
-        name: proficiency.name,
-        url: proficiency.url
-      }))
-      console.log('Proficiency Data:', proficiencyData);
-      dispatch(getAllProficiencies(proficiencyData))
-    })
+    .then(data => dispatch(getAllProficiencies(data.results)))
     .catch(err => console.error(err));
 };
