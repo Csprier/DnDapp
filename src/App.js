@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import AbilityScores from './components/abilityScores';
 import Classes from './components/classes';
 import Skills from './components/skills';
