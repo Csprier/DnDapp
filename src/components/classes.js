@@ -25,7 +25,7 @@ class Classes extends Component {
         <button onClick={(e) => this.onClick()}>
           SEE CLASSES
         </button>
-        <Modal show={this.props.isOpen}>
+        <Modal show={this.props.isOpen} index={1}>
             {this.props.classes.map((classItem, i) => {
               return (
                 <li key={i} className="classNode">
