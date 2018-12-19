@@ -14,7 +14,7 @@ class AbilityScores extends Component {
   render() {
     return (
       <div className="ability-scores">
-        <h2>Ability scores</h2>
+        <h3>Ability scores</h3>
         <ul>
           {this.props.abilityScores.map((score, i) => {
             return (

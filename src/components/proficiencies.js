@@ -14,7 +14,7 @@ class Proficiencies extends Component {
   render() {
     return (
       <div className="proficiencies">
-        <h2>Proficiencies</h2>
+        <h3>Proficiencies</h3>
         <ul>
           {this.props.proficiencies.map((proficiency, i) => {
             return (

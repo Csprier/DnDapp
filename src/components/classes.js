@@ -14,7 +14,7 @@ class Classes extends Component {
   render() {
     return (
       <div className="character-classes">
-      <h2>Character classes</h2>
+        <h3>Character classes</h3>
         <ul>
           {this.props.classes.map((classItem, i) => {
             return (

@@ -14,7 +14,7 @@ class Languages extends Component {
   render() {
     return (
       <div className="languages">
-        <h2>Languages</h2>
+        <h3>Languages</h3>
         <ul>
           {this.props.languages.map((language, i) => {
             return (

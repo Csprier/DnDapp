@@ -14,7 +14,7 @@ class Skills extends Component {
   render() {
     return (
       <div className="skills">
-        <h2>Skills</h2>
+        <h3>Skills</h3>
         <ul>
           {this.props.skills.map((skill, i) => {
             return (

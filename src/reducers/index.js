@@ -1,16 +1,22 @@
 import { combineReducers } from 'redux';
-import characterClassReducer from './characterClassReducer';
 import abilityScoreReducer from './abilityScoresReducer';
-import skillsReducer from './skillsReducer';
-import proficienciesReducer from './proficienciesReducer';
+import characterClassReducer from './characterClassReducer';
+import conditionsReducer from './conditionsReducer';
+import damageTypesReducer from './damageTypesReducer';
+import magicSchoolsReducer from './magicSchoolsReducer';
 import languagesReducer from './languagesReducer';
+import proficienciesReducer from './proficienciesReducer';
+import skillsReducer from './skillsReducer';
 
 const appReducer = combineReducers({
-  characterClasses: characterClassReducer,
   abilityScores: abilityScoreReducer,
-  skills: skillsReducer,
+  characterClasses: characterClassReducer,
+  conditions: conditionsReducer,
+  damageTypes: damageTypesReducer,
+  languages: languagesReducer,
+  magicSchools: magicSchoolsReducer,
   proficiencies: proficienciesReducer,
-  languages: languagesReducer
+  skills: skillsReducer
 })
 
 export default appReducer;
