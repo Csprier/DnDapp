@@ -19,7 +19,7 @@ export default function magicSchoolsReducer(state = initialState, action) {
       }
     case GET_ALL_MAGIC_SCHOOLS:
       return {
-        magicSchools: action.magicSchools,
+        magicSchools: action.school,
         loading: false
       }
     default:

@@ -7,9 +7,9 @@ export const REQUEST_MAGIC_SCHOOLS_SUCCESS = 'REQUEST_MAGIC_SCHOOLS_SUCCESS',
   requestMagicSchoolsSuccess = () => ({ type: REQUEST_MAGIC_SCHOOLS_SUCCESS });
 
 export const GET_ALL_MAGIC_SCHOOLS = 'GET_ALL_MAGIC_SCHOOLS',
-  getAllMagicSchools = (schools) => ({
+  getAllMagicSchools = (school) => ({
     type: GET_ALL_MAGIC_SCHOOLS,
-    schools
+    school
   });
 
 export const listAllMagicSchools = () => dispatch => {
@@ -17,8 +17,12 @@ export const listAllMagicSchools = () => dispatch => {
   return fetch(`${API_BASE_URL}/magic-schools`, { method: 'GET' })
     .then(res => res.json())
     .then(data => {
-      console.log('DATA from listAllMagicSchools', data.results);
-      dispatch(getAllMagicSchools(data.results))
+      // console.log('DATA from listAllMagicSchools', data.results);
+      dispatch(getAllMagicSchools(data.results));
+      dispatch(requestMagicSchoolsSuccess());
     })
-    .catch(err => console.error(err));
+    .catch(err => {
+      // dispatch(magicSchoolsErrors(err));
+      console.error(err);
+    });
 };

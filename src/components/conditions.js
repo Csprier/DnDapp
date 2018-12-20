@@ -30,7 +30,8 @@ class Conditions extends Component {
 }
 
 const mapStateToProps = state => ({
-  conditions: state.conditions.conditions
+  conditions: state.conditions.conditions,
+  loading: state.conditions.loading
 });
 
 export default connect(mapStateToProps)(Conditions);
