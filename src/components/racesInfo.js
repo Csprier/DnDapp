@@ -8,7 +8,7 @@ class RacesInfo extends Component {
   render() {
     return (
       <div className="races-info-container">
-        <h2>Races</h2>
+        <h2>Races Information</h2>
         <Races />
         <SubRaces />
         <Traits />

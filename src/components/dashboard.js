@@ -7,7 +7,7 @@ import GameMechanics from './gameMechanics';
 import RacesInfo from './racesInfo';
 
 
-// import './dashboard.css';
+import '../css/dashboard.css';
 
 class Dashboard extends Component {
   render() {
