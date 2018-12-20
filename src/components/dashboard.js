@@ -4,10 +4,13 @@ import AbilityScores from './abilityScores';
 import Classes from './classes';
 import Conditions from './conditions';
 import DamageTypes from './damageTypes';
+import Features from './features';
 import MagicSchools from './magicSchools'
 import Languages from './languages';
 import Proficiences from './proficiencies';
 import Skills from './skills';
+import SpellCasting from './spellCasting';
+import StartingEquipment from './startingEquipment';
 import SubClasses from './subClasses';
 
 // import './dashboard.css';
@@ -35,10 +38,16 @@ class Dashboard extends Component {
             <h2>Classes</h2>
             <Classes />
             <SubClasses />
+            <Features />
+            <SpellCasting />
+            <StartingEquipment />
           </div>
 
           <div className="races-info-container">
             <h2>Races</h2>
+            {/* <Races />
+            <SubRaces />
+            <Traits /> */}
           </div>
 
           <div className="equipment-info-container">
