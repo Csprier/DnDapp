@@ -13,11 +13,13 @@ export const GET_ALL_DAMAGE_TYPES = 'GET_ALL_DAMAGE_TYPES',
   });
 
 export const listAllDamageTypes = () => dispatch => {
+  dispatch(requestDamageTypes())
   return fetch(`${API_BASE_URL}/damage-types`, { method: 'GET' })
     .then(res => res.json())
     .then(data => {
       // console.log('DATA from listAllDamageTypes', data.results);
-      dispatch(getAllDamageTypes(data.results))
+      dispatch(getAllDamageTypes(data.results));
+      dispatch(requestDamageTypesSuccess());
     })
     .catch(err => console.error(err));
 };

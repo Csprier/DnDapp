@@ -13,11 +13,13 @@ export const GET_ALL_ABILITY_SCORES = 'GET_ALL_ABILITY_SCORES',
   });
 
 export const listAllAbilityScores = () => dispatch => {
+  dispatch(requestAbilityScores())
   return fetch(`${API_BASE_URL}/ability-scores`, { method: 'GET' })
     .then(res => res.json())
     .then(data => {
       // console.log('DATA from listAllAbilityScores', data.results);
       dispatch(getAllAbilityScores(data.results))
+      dispatch(requestAbilityScoresSuccess())
     })
     .catch(err => console.error(err));
 };

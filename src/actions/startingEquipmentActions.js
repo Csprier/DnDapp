@@ -13,8 +13,12 @@ export const GET_ALL_STARTING_EQUIPMENT = 'GET_ALL_STARTING_EQUIPMENT',
   });
 
 export const listAllStartingEquipment = () => dispatch => {
+  dispatch(requestStartingEquipment())
   return fetch(`${API_BASE_URL}/startingequipment`, { method: 'GET' })
     .then(res => res.json())
-    .then(data => dispatch(getAllStartingEquipment(data.results)))
+    .then(data => {
+      dispatch(getAllStartingEquipment(data.results));
+      dispatch(requestStartingEquipmentSuccess());
+    })
     .catch(err => console.error(err));
 };

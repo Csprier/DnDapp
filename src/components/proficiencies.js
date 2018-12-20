@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { requestProficiencies, requestProficienciesSuccess, listAllProficiencies } from '../actions/proficienciesActions';
+import { listAllProficiencies } from '../actions/proficienciesActions';
 
 import '../css/proficiencies.css';
 
 class Proficiencies extends Component {
   componentDidMount() {
-    this.props.dispatch(requestProficiencies())
-    this.props.dispatch(listAllProficiencies())
-    this.props.dispatch(requestProficienciesSuccess())
+    this.props.dispatch(listAllProficiencies());
   }
 
   render() {

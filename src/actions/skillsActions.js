@@ -13,11 +13,13 @@ export const GET_ALL_SKILLS = 'GET_ALL_SKILLS',
   });
 
 export const listAllSkills = () => dispatch => {
+  dispatch(requestSkills())
   return fetch(`${API_BASE_URL}/skills`, { method: 'GET' })
     .then(res => res.json())
     .then(data => {
       // console.log('DATA from listAllSkills', data.results);
-      dispatch(getAllSkills(data.results))
+      dispatch(getAllSkills(data.results));
+      dispatch(requestSkillsSuccess());
     })
     .catch(err => console.error(err));
 };

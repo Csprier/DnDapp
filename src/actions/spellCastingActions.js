@@ -13,8 +13,12 @@ export const GET_ALL_SPELL_CASTING = 'GET_ALL_SPELL_CASTING',
   });
 
 export const listAllSpellCasting = () => dispatch => {
+  dispatch(requestSpellCasting())
   return fetch(`${API_BASE_URL}/spellcasting`, { method: 'GET' })
     .then(res => res.json())
-    .then(data => dispatch(getAllSpellCasting(data.results)))
+    .then(data => {
+      dispatch(getAllSpellCasting(data.results));
+      dispatch(requestSpellCastingSuccess());
+    })
     .catch(err => console.error(err));
 };

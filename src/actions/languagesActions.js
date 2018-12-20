@@ -13,8 +13,12 @@ export const GET_ALL_LANGUAGES = 'GET_ALL_LANGUAGES',
   });
 
 export const listAllLanguages = () => dispatch => {
+  dispatch(requestLanguages())
   return fetch(`${API_BASE_URL}/languages`, { method: 'GET' })
     .then(res => res.json())
-    .then(data => dispatch(getAllLanguages(data.results)))
+    .then(data => {
+      dispatch(getAllLanguages(data.results));
+      dispatch(requestLanguagesSuccess());
+    })
     .catch(err => console.error(err));
 };

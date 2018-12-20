@@ -17,8 +17,12 @@ export const GET_ALL_CHARACTER_CLASSES = 'GET_ALL_CHARACTER_CLASSES',
 
   // Async call to API URL/classes
 export const listAllClasses = () => dispatch => {
+  dispatch(requestCharacterClasses())
   return fetch(`${API_BASE_URL}/classes`, { method: 'GET' })
     .then(res => res.json())
-    .then(data => dispatch(getAllCharacterClasses(data.results)))
+    .then(data => {
+      dispatch(getAllCharacterClasses(data.results))
+      dispatch(requestCharacterClassesSuccess())
+    })
     .catch(err => console.error(err));
 };

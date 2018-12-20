@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { requestSkills, requestSkillsSuccess, listAllSkills } from '../actions/skillsActions';
+import { listAllSkills } from '../actions/skillsActions';
 
 import '../css/skills.css';
 
 class Skills extends Component {
   componentDidMount() {
-    this.props.dispatch(requestSkills())
-    this.props.dispatch(listAllSkills())
-    this.props.dispatch(requestSkillsSuccess())
+    this.props.dispatch(listAllSkills());
   }
 
   render() {

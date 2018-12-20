@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { requestSpellCasting, requestSpellCastingSuccess, listAllSpellCasting } from '../actions/spellCastingActions';
+import { listAllSpellCasting } from '../actions/spellCastingActions';
 
 // import '../css/spellCasting.css';
 
 class SpellCasting extends Component {
   componentDidMount() {
-    this.props.dispatch(requestSpellCasting())
-    this.props.dispatch(listAllSpellCasting())
-    this.props.dispatch(requestSpellCastingSuccess())
+    this.props.dispatch(listAllSpellCasting());
   }
 
   render() {

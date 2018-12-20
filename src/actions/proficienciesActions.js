@@ -13,8 +13,12 @@ export const GET_ALL_PROFICIENCIES = 'GET_ALL_PROFICIENCIES',
   });
 
 export const listAllProficiencies = () => dispatch => {
+  dispatch(requestProficiencies())
   return fetch(`${API_BASE_URL}/proficiencies`, { method: 'GET' })
     .then(res => res.json())
-    .then(data => dispatch(getAllProficiencies(data.results)))
+    .then(data => {
+      dispatch(getAllProficiencies(data.results));
+      dispatch(requestProficienciesSuccess());
+    })
     .catch(err => console.error(err));
 };

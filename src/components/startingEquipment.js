@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { requestStartingEquipment, requestStartingEquipmentSuccess, listAllStartingEquipment } from '../actions/startingEquipmentActions';
+import { listAllStartingEquipment } from '../actions/startingEquipmentActions';
 
 // import '../css/startingEquipment.css';
 
 class StartingEquipment extends Component {
   componentDidMount() {
-    this.props.dispatch(requestStartingEquipment())
-    this.props.dispatch(listAllStartingEquipment())
-    this.props.dispatch(requestStartingEquipmentSuccess())
+    this.props.dispatch(listAllStartingEquipment());
   }
 
   render() {

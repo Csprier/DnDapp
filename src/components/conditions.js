@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { requestConditions, requestConditionsSuccess, listAllConditions } from '../actions/conditionsActions';
+import { listAllConditions } from '../actions/conditionsActions';
 
 // import '../css/conditions.css';
 
 class Conditions extends Component {
   componentDidMount() {
-    this.props.dispatch(requestConditions())
-    this.props.dispatch(listAllConditions())
-    this.props.dispatch(requestConditionsSuccess())
+    this.props.dispatch(listAllConditions());
   }
 
   render() {

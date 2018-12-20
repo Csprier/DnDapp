@@ -13,8 +13,12 @@ export const GET_ALL_FEATURES = 'GET_ALL_FEATURES',
   });
 
 export const listAllFeatures = () => dispatch => {
+  dispatch(requestFeatures())
   return fetch(`${API_BASE_URL}/features`, { method: 'GET' })
     .then(res => res.json())
-    .then(data => dispatch(getAllFeatures(data.results)))
+    .then(data => {
+      dispatch(getAllFeatures(data.results));
+      dispatch(requestFeaturesSuccess());
+    })
     .catch(err => console.error(err));
 };

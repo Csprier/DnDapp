@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { requestDamageTypes, requestDamageTypesSuccess, listAllDamageTypes } from '../actions/damageTypesActions';
+import { listAllDamageTypes } from '../actions/damageTypesActions';
 
 // import '../css/skills.css';
 
 class DamageTypes extends Component {
   componentDidMount() {
-    this.props.dispatch(requestDamageTypes())
-    this.props.dispatch(listAllDamageTypes())
-    this.props.dispatch(requestDamageTypesSuccess())
+    this.props.dispatch(listAllDamageTypes());
   }
 
   render() {

@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { requestLanguages, requestLanguagesSuccess, listAllLanguages } from '../actions/languagesActions';
+import { listAllLanguages } from '../actions/languagesActions';
 
 import '../css/languages.css';
 
 class Languages extends Component {
   componentDidMount() {
-    this.props.dispatch(requestLanguages())
-    this.props.dispatch(listAllLanguages())
-    this.props.dispatch(requestLanguagesSuccess())
+    this.props.dispatch(listAllLanguages());
   }
 
   render() {

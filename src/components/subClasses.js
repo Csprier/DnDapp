@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { requestSubClasses, requestSubClassesSuccess, listAllSubClasses } from '../actions/subClassesActions';
+import { listAllSubClasses } from '../actions/subClassesActions';
 
 import '../css/classes.css';
 
 class SubClasses extends Component {
   componentDidMount() {
-    this.props.dispatch(requestSubClasses())
-    this.props.dispatch(listAllSubClasses())
-    this.props.dispatch(requestSubClassesSuccess())
+    this.props.dispatch(listAllSubClasses());
   }
 
   render() {

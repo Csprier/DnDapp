@@ -6,7 +6,7 @@ import { listAllMagicSchools } from '../actions/magicSchoolsActions';
 
 class MagicSchools extends Component {
   componentDidMount() {
-    this.props.dispatch(listAllMagicSchools())
+    this.props.dispatch(listAllMagicSchools());
   }
 
   render() {

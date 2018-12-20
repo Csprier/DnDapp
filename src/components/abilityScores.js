@@ -1,14 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { requestAbilityScores, requestAbilityScoresSuccess, listAllAbilityScores } from '../actions/abilityScoresActions';
-
+import { listAllAbilityScores } from '../actions/abilityScoresActions';
 import '../css/abilityScores.css';
 
 class AbilityScores extends Component {
   componentDidMount() {
-    this.props.dispatch(requestAbilityScores())
-    this.props.dispatch(listAllAbilityScores())
-    this.props.dispatch(requestAbilityScoresSuccess())
+    this.props.dispatch(listAllAbilityScores());
   }
 
   render() {

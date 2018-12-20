@@ -13,8 +13,12 @@ export const GET_ALL_SUB_CLASSES = 'GET_ALL_SUB_CLASSES',
   });
 
 export const listAllSubClasses = () => dispatch => {
+  dispatch(requestSubClasses())
   return fetch(`${API_BASE_URL}/subclasses`, { method: 'GET' })
     .then(res => res.json())
-    .then(data => dispatch(getAllSubClasses(data.results)))
+    .then(data => {
+      dispatch(getAllSubClasses(data.results));
+      dispatch(requestSubClassesSuccess());
+    })
     .catch(err => console.error(err));
 };

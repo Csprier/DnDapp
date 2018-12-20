@@ -13,11 +13,13 @@ export const GET_ALL_CONDITIONS = 'GET_ALL_CONDITIONS',
   });
 
 export const listAllConditions = () => dispatch => {
+  dispatch(requestConditions())
   return fetch(`${API_BASE_URL}/conditions`, { method: 'GET' })
     .then(res => res.json())
     .then(data => {
       // console.log('DATA from listAllConditions', data.results);
-      dispatch(getAllConditions(data.results))
+      dispatch(getAllConditions(data.results));
+      dispatch(requestConditionsSuccess());
     })
     .catch(err => console.error(err));
 };

@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { requestCharacterClasses, requestCharacterClassesSuccess, listAllClasses } from '../actions/characterClassActions';
+import { listAllClasses } from '../actions/characterClassActions';
 
 import '../css/classes.css';
 
 class Classes extends Component {
   componentDidMount() {
-    this.props.dispatch(requestCharacterClasses())
-    this.props.dispatch(listAllClasses())
-    this.props.dispatch(requestCharacterClassesSuccess())
+    this.props.dispatch(listAllClasses());
   }
 
   render() {

@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { requestFeatures, requestFeaturesSuccess, listAllFeatures } from '../actions/featuresActions';
+import { listAllFeatures } from '../actions/featuresActions';
 
 // import '../css/features.css';
 
 class Features extends Component {
   componentDidMount() {
-    this.props.dispatch(requestFeatures())
-    this.props.dispatch(listAllFeatures())
-    this.props.dispatch(requestFeaturesSuccess())
+    this.props.dispatch(listAllFeatures());
   }
 
   render() {
