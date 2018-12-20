@@ -18,8 +18,10 @@ export const listAllAbilityScores = () => dispatch => {
     .then(res => res.json())
     .then(data => {
       // console.log('DATA from listAllAbilityScores', data.results);
-      dispatch(getAllAbilityScores(data.results))
-      dispatch(requestAbilityScoresSuccess())
+      dispatch(getAllAbilityScores(data.results));
+      dispatch(requestAbilityScoresSuccess());
     })
-    .catch(err => console.error(err));
+    .catch(error => {
+      console.error(error);
+    });
 };

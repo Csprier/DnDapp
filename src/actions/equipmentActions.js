@@ -17,7 +17,7 @@ export const listAllEquipment = () => dispatch => {
   return fetch(`${API_BASE_URL}/equipment`, { method: 'GET' })
     .then(res => res.json())
     .then(data => {
-      console.log('data from listAllEquipment: ', data.results);
+      // console.log('data from listAllEquipment: ', data.results);
       dispatch(getAllEquipment(data.results));
       dispatch(requestEquipmentSuccess());
     })

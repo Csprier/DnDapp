@@ -17,7 +17,7 @@ export const listAllSubRaces = () => dispatch => {
   return fetch(`${API_BASE_URL}/subraces`, { method: 'GET' })
     .then(res => res.json())
     .then(data => {
-      console.log('DATA from listAllSubRaces', data.results);
+      // console.log('DATA from listAllSubRaces', data.results);
       dispatch(getAllSubRaces(data.results));
       dispatch(requestSubRacesSuccess());
     })

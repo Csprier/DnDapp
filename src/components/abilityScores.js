@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { listAllAbilityScores } from '../actions/abilityScoresActions';
+
 import '../css/abilityScores.css';
 
 class AbilityScores extends Component {
@@ -27,7 +28,8 @@ class AbilityScores extends Component {
 }
 
 const mapStateToProps = state => ({
-  abilityScores: state.abilityScores.abilityScores
+  abilityScores: state.abilityScores.abilityScores,
+  ms: state.abilityScores
 });
 
 export default connect(mapStateToProps)(AbilityScores);

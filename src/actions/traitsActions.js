@@ -17,7 +17,7 @@ export const listAllTraits = () => dispatch => {
   return fetch(`${API_BASE_URL}/traits`, { method: 'GET' })
     .then(res => res.json())
     .then(data => {
-      console.log('data from listAllTraits: ', data.results);
+      // console.log('data from listAllTraits: ', data.results);
       dispatch(getAllTraits(data.results));
       dispatch(requestTraitsSuccess());
     })

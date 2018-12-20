@@ -20,7 +20,7 @@ export default function abilityScoreReducer(state = initialState, action) {
     case GET_ALL_ABILITY_SCORES:
       return {
         abilityScores: action.abilityScores,
-        loading: false
+        loading: false,
       }
     default:
       return state;
