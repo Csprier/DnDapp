@@ -8,6 +8,7 @@ import MagicSchools from './magicSchools'
 import Languages from './languages';
 import Proficiences from './proficiencies';
 import Skills from './skills';
+import SubClasses from './subClasses';
 
 // import './dashboard.css';
 
@@ -33,6 +34,7 @@ class Dashboard extends Component {
           <div className="classes-info-container">
             <h2>Classes</h2>
             <Classes />
+            <SubClasses />
           </div>
 
           <div className="races-info-container">

@@ -5,7 +5,7 @@ const initialState = {
   loading: false
 }
 
-export default function classReducer(state = initialState, action) {
+export default function abilityScoreReducer(state = initialState, action) {
   switch(action.type) {
     case REQUEST_ABILITY_SCORES:
       return {
