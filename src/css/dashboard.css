@@ -5,7 +5,7 @@
 }
 
 .dashboard ul {
-  margin: 0px;
+  margin: 0px 0px 10px 0px;
   padding: 0px;
 }
 
@@ -14,7 +14,6 @@
   margin: 0 auto;
   padding: 5px 0px 5px 15px;
   list-style-type: none;
-  /* border-top: 1px solid #544110;; */
   border-bottom: 1px solid #544110;
 }
 
@@ -32,9 +31,7 @@
   padding: 5px 0px 5px 15px;
   color: goldenrod;
   background-color: #2f2f2f;
-  border-top: 1px solid goldenrod;
-  border-left: 2px solid goldenrod;
-  border-right: 2px solid goldenrod;
+  /* border-top: 1px solid goldenrod; */
 }
 
 .dashboard h3 {
@@ -42,7 +39,5 @@
   padding: 5px 0px 5px 15px;
   color: goldenrod;
   background-color: #6b6b6b;
-  border-top: 1px solid goldenrod;
-  border-left: 2px solid goldenrod;
-  border-right: 2px solid goldenrod;
+  /* border-top: 1px solid goldenrod; */
 }
