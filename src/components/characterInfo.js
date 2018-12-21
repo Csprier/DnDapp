@@ -27,7 +27,10 @@ class CharacterInfo extends Component {
   render() {
     return (
       <div className="character-info-container">
-        <h2 onClick={() => this.toggleDisplay()}>Character Information</h2>
+        <div className="gm-header">
+          <h2 onClick={() => this.toggleDisplay()}>Character Information</h2>
+          <p>&#8964;</p>
+        </div>
         <div className={(this.state.display) ? "expanded" : "hidden"}>
           <AbilityScores />
           <Skills />

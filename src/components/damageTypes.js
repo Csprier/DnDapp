@@ -28,7 +28,7 @@ class DamageTypes extends Component {
   render() {
     return (
       <div className="damage-types">
-        <h3 onClick={() =>this.toggleDisplay()}>Damage Types</h3>
+        <h3 onClick={() =>this.toggleDisplay()}>&#8964; Damage Types</h3>
         <div className={(this.state.display) ? "expanded" : "hidden"}>
           <ul>
             {this.props.damageTypes.map((type, i) => {

@@ -4,6 +4,7 @@ import Conditions from './conditions';
 import DamageTypes from './damageTypes';
 import MagicSchools from './magicSchools'
 
+import '../css/gameMechanics.css';
 import '../css/toggleDisplay.css';
 
 class GameMechanics extends Component {
@@ -27,7 +28,10 @@ class GameMechanics extends Component {
     console.log('Display state is now: ', this.state.display);
     return (
       <div className="game-mechanics-info-container">
-        <h2 onClick={() =>this.toggleDisplay()}>Game Mechanics</h2>
+        <div className="gm-header">
+          <h2 onClick={() =>this.toggleDisplay()}>Game Mechanics</h2>
+          <p>&#8964;</p>
+        </div>
         <div className={(this.state.display) ? "expanded" : "hidden"}>
           <Conditions />
           <DamageTypes />

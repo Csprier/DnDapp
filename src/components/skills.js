@@ -28,7 +28,7 @@ class Skills extends Component {
   render() {
     return (
       <div className="skills">
-        <h3 onClick={() =>this.toggleDisplay()}>Skills</h3>
+        <h3 onClick={() =>this.toggleDisplay()}>&#8964; Skills</h3>
         <div className={(this.state.display) ? "expanded" : "hidden"}>
           <ul>
             {this.props.skills.map((skill, i) => {

@@ -28,7 +28,7 @@ class SubClasses extends Component {
   render() {
     return (
       <div className="sub-classes">
-        <h3 onClick={() =>this.toggleDisplay()}>Sub Classes</h3>
+        <h3 onClick={() =>this.toggleDisplay()}>&#8964; Sub Classes</h3>
         <div className={(this.state.display) ? "expanded" : "hidden"}>
           <ul>
             {this.props.subClasses.map((subClass, i) => {

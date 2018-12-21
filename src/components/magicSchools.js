@@ -28,7 +28,7 @@ class MagicSchools extends Component {
   render() {
     return (
       <div className="magic-schools">
-        <h3 onClick={() =>this.toggleDisplay()}>Magic Schools</h3>
+        <h3 onClick={() =>this.toggleDisplay()}>&#8964; Magic Schools</h3>
         <div className={(this.state.display) ? "expanded" : "hidden"}>
           <ul>
             {this.props.magicSchools.map((school, i) => {

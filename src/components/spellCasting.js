@@ -28,7 +28,7 @@ class SpellCasting extends Component {
   render() {
     return (
       <div className="spellcasting">
-        <h3 onClick={() =>this.toggleDisplay()}>Spellcasting</h3>
+        <h3 onClick={() =>this.toggleDisplay()}>&#8964; Spellcasting</h3>
         <div className={(this.state.display) ? "expanded" : "hidden"}>
           <ul>
             {this.props.spellCasting.map((charClass, i) => {

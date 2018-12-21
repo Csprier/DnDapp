@@ -28,7 +28,7 @@ class SubRaces extends Component {
   render() {
     return (
       <div className="subraces">
-        <h3 onClick={() =>this.toggleDisplay()}>SubRaces</h3>
+        <h3 onClick={() =>this.toggleDisplay()}>&#8964; SubRaces</h3>
         <div className={(this.state.display) ? "expanded" : "hidden"}>
           <ul>
             {this.props.subRaces.map((subRace, i) => {

@@ -28,7 +28,7 @@ class Features extends Component {
   render() {
     return (
       <div className="features">
-        <h3 onClick={() =>this.toggleDisplay()}>Features</h3>
+        <h3 onClick={() =>this.toggleDisplay()}>&#8964; Features</h3>
         <div className={(this.state.display) ? "expanded" : "hidden"}>
           <ul>
             {this.props.features.map((feature, i) => {

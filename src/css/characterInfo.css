@@ -1,0 +1,19 @@
+.char-info-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: maroon;
+}
+
+.char-info-header h2, p {
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+}
+
+.char-info-header p {
+  font-size: 25px;
+  font-weight: bold;
+  padding-right: 10px;
+  color: goldenrod;
+}

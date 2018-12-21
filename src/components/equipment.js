@@ -29,7 +29,7 @@ class Equipment extends Component {
   render() {
     return (
       <div className="equipment">
-        <h3 onClick={() =>this.toggleDisplay()}>Equipment</h3>
+        <h3 onClick={() =>this.toggleDisplay()}>&#8964; Equipment</h3>
         <div className={(this.state.display) ? "expanded" : "hidden"}>
           <ul>
             {this.props.equipment.map((equipment, i) => {

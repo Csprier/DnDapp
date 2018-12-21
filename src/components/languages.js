@@ -28,7 +28,7 @@ class Languages extends Component {
   render() {
     return (
       <div className="languages">
-        <h3 onClick={() =>this.toggleDisplay()}>Languages</h3>
+        <h3 onClick={() =>this.toggleDisplay()}>&#8964; Languages</h3>
         <div className={(this.state.display) ? "expanded" : "hidden"}>
           <ul>
             {this.props.languages.map((language, i) => {

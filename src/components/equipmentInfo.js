@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import Equipment from './equipment';
 
+import '../css/equipmentInfo.css';
 import '../css/toggleDisplay.css';
 
 class EquipmentInfo extends Component {
@@ -24,7 +25,10 @@ class EquipmentInfo extends Component {
   render() {
     return (
       <div className="equipment-info-container">
-        <h2 onClick={() =>this.toggleDisplay()}>Equipment</h2>
+        <div className="classes-info-header">
+          <h2 onClick={() =>this.toggleDisplay()}>Equipment</h2>
+          <p>&#8964;</p>
+        </div>
         <div className={(this.state.display) ? "expanded" : "hidden"}>
           <Equipment />
         </div>

@@ -28,7 +28,7 @@ class AbilityScores extends Component {
   render() {
     return (
       <div className="ability-scores">
-        <h3 onClick={() =>this.toggleDisplay()}>Ability scores</h3>
+        <h3 onClick={() =>this.toggleDisplay()}>&#8964; Ability scores</h3>
         <div className={(this.state.display) ? "expanded" : "hidden"}>
           <ul>
             {this.props.abilityScores.map((score, i) => {

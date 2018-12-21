@@ -29,7 +29,7 @@ class Traits extends Component {
   render() {
     return (
       <div className="traits">
-        <h3 onClick={() =>this.toggleDisplay()}>Traits</h3>
+        <h3 onClick={() =>this.toggleDisplay()}>&#8964; Traits</h3>
         <div className={(this.state.display) ? "expanded" : "hidden"}>
           <ul>
             {this.props.traits.map((trait, i) => {

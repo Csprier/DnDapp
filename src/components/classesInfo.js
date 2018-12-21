@@ -6,6 +6,9 @@ import Features from './features';
 import Spellcasting from './spellCasting';
 import StartingEquipment from './startingEquipment';
 
+import '../css/classesInfo.css';
+import '../css/toggleDisplay.css';
+
 class ClassesInfo extends Component {
   constructor() {
     super();
@@ -26,7 +29,10 @@ class ClassesInfo extends Component {
   render() {
     return (
       <div className="classes-info-container">
-        <h2 onClick={() =>this.toggleDisplay()}>Classes Information</h2>
+        <div className="classes-info-header">
+          <h2 onClick={() =>this.toggleDisplay()}>Classes Information</h2>
+          <p>&#8964;</p>
+        </div>
         <div className={(this.state.display) ? "expanded" : "hidden"}>
           <Classes />
           <Subclasses />

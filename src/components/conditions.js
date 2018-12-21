@@ -28,7 +28,7 @@ class Conditions extends Component {
   render() {
     return (
       <div className="conditions">
-        <h3 onClick={() =>this.toggleDisplay()}>Conditions</h3>
+        <h3 onClick={() =>this.toggleDisplay()}>&#8964; Conditions</h3>
         <div className={(this.state.display) ? "expanded" : "hidden"}>
           <ul>
             {this.props.conditions.map((condition, i) => {

@@ -4,6 +4,9 @@ import Races from './races';
 import SubRaces from './subRaces.js';
 import Traits from './traits';
 
+import '../css/toggleDisplay.css';
+import '../css/racesInfo.css';
+
 class RacesInfo extends Component {
   constructor() {
     super();
@@ -24,7 +27,10 @@ class RacesInfo extends Component {
   render() {
     return (
       <div className="races-info-container">
-        <h2 onClick={() =>this.toggleDisplay()}>Races Information</h2>
+        <div className="races-info-header">
+          <h2 onClick={() =>this.toggleDisplay()}>Races Information</h2>
+          <p>&#8964;</p>
+        </div>
         <div className={(this.state.display) ? "expanded" : "hidden"}>
           <Races />
           <SubRaces />

@@ -1,0 +1,19 @@
+.gm-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: maroon;
+}
+
+.gm-header h2, p {
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+}
+
+.gm-header p {
+  font-size: 25px;
+  font-weight: bold;
+  padding-right: 10px;
+  color: goldenrod;
+}
