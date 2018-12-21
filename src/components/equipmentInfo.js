@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 
 import Equipment from './equipment';
-import StartingEquipment from './startingEquipment';
+
+import '../css/toggleDisplay.css';
 
 class EquipmentInfo extends Component {
   constructor() {
@@ -25,7 +26,6 @@ class EquipmentInfo extends Component {
       <div className="equipment-info-container">
         <h2 onClick={() =>this.toggleDisplay()}>Equipment</h2>
         <div className={(this.state.display) ? "expanded" : "hidden"}>
-          <StartingEquipment />
           <Equipment />
         </div>
       </div>

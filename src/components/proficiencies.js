@@ -5,6 +5,22 @@ import { listAllProficiencies } from '../actions/proficienciesActions';
 import '../css/proficiencies.css';
 
 class Proficiencies extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      display: false
+    }
+  }
+
+  toggleDisplay = () => {
+    console.log('Toggle display button clicked. Changing the state from:', this.state.display);
+    this.setState({
+      display: !this.state.display
+    });
+    // console.log('this.setState has occurred in toggleDisplay()');
+  }
+
   componentDidMount() {
     this.props.dispatch(listAllProficiencies());
   }
@@ -12,16 +28,18 @@ class Proficiencies extends Component {
   render() {
     return (
       <div className="proficiencies">
-        <h3>Proficiencies</h3>
-        <ul>
-          {this.props.proficiencies.map((proficiency, i) => {
-            return (
-              <li key={i} className="proficiencyNode">
-                <a href={proficiency.url}>{proficiency.name}</a>
-              </li>
-            );
-          })}
-        </ul>
+        <h3 onClick={() =>this.toggleDisplay()}>Proficiencies</h3>
+        <div className={(this.state.display) ? "expanded" : "hidden"}>
+          <ul>
+            {this.props.proficiencies.map((proficiency, i) => {
+              return (
+                <li key={i} className="proficiencyNode">
+                  <a href={proficiency.url}>{proficiency.name}</a>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
       </div>
     );
   }

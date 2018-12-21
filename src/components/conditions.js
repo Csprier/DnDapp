@@ -5,6 +5,22 @@ import { listAllConditions } from '../actions/conditionsActions';
 // import '../css/conditions.css';
 
 class Conditions extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      display: false
+    }
+  }
+
+  toggleDisplay = () => {
+    console.log('Toggle display button clicked. Changing the state from:', this.state.display);
+    this.setState({
+      display: !this.state.display
+    });
+    // console.log('this.setState has occurred in toggleDisplay()');
+  }
+
   componentDidMount() {
     this.props.dispatch(listAllConditions());
   }
@@ -12,16 +28,18 @@ class Conditions extends Component {
   render() {
     return (
       <div className="conditions">
-        <h3>Conditions</h3>
-        <ul>
-          {this.props.conditions.map((condition, i) => {
-            return (
-              <li key={i} className="conditionNode">
-                <a href={condition.url}>{condition.name}</a>
-              </li>
-            );
-          })}
-        </ul>
+        <h3 onClick={() =>this.toggleDisplay()}>Conditions</h3>
+        <div className={(this.state.display) ? "expanded" : "hidden"}>
+          <ul>
+            {this.props.conditions.map((condition, i) => {
+              return (
+                <li key={i} className="conditionNode">
+                  <a href={condition.url}>{condition.name}</a>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
       </div>
     );
   }
