@@ -1,0 +1,8 @@
+.hidden {
+  display: none;
+}
+
+.expanded {
+  /* border: 1px solid red; */
+  background-color: whitesmoke;
+}
