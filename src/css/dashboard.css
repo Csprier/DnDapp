@@ -12,7 +12,7 @@
 .dashboard li {
   width: 90%;
   margin: 0 auto;
-  padding: 5px 0px 5px 15px;
+  padding: 15px 0px 15px 15px;
   list-style-type: none;
   border-bottom: 1px solid #544110;
 }
@@ -28,16 +28,15 @@
 
 .dashboard h2 {
   margin: 0px;
-  padding: 5px 0px 5px 15px;
+  padding: 15px 0px 15px 15px;
   color: goldenrod;
-  /* background-color: maroon; */
-  /* border-top: 1px solid goldenrod; */
+  /* border-bottom: goldenrod; */
 }
 
 .dashboard h3 {
   margin: 0px;
-  padding: 5px 0px 5px 15px;
+  padding: 15px 0px 15px 15px;
   color: goldenrod;
   background-color: #6b6b6b;
-  /* border-top: 1px solid goldenrod; */
+  /* border-bottom: goldenrod; */
 }

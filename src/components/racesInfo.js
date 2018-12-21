@@ -27,8 +27,8 @@ class RacesInfo extends Component {
   render() {
     return (
       <div className="races-info-container">
-        <div className="races-info-header">
-          <h2 onClick={() =>this.toggleDisplay()}>Races Information</h2>
+        <div className="races-info-header" onClick={() =>this.toggleDisplay()}>
+          <h2>Races Information</h2>
           <p>&#8964;</p>
         </div>
         <div className={(this.state.display) ? "expanded" : "hidden"}>

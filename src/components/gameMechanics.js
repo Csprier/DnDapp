@@ -21,15 +21,14 @@ class GameMechanics extends Component {
     this.setState({
       display: !this.state.display
     });
-    // console.log('this.setState has occurred in toggleDisplay()');
   }
 
   render() {
     console.log('Display state is now: ', this.state.display);
     return (
       <div className="game-mechanics-info-container">
-        <div className="gm-header">
-          <h2 onClick={() =>this.toggleDisplay()}>Game Mechanics</h2>
+        <div className="gm-header" onClick={() =>this.toggleDisplay()}>
+          <h2>Game Mechanics</h2>
           <p>&#8964;</p>
         </div>
         <div className={(this.state.display) ? "expanded" : "hidden"}>

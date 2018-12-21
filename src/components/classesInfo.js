@@ -29,8 +29,8 @@ class ClassesInfo extends Component {
   render() {
     return (
       <div className="classes-info-container">
-        <div className="classes-info-header">
-          <h2 onClick={() =>this.toggleDisplay()}>Classes Information</h2>
+        <div className="classes-info-header" onClick={() =>this.toggleDisplay()}>
+          <h2>Classes Information</h2>
           <p>&#8964;</p>
         </div>
         <div className={(this.state.display) ? "expanded" : "hidden"}>

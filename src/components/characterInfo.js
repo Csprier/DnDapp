@@ -5,6 +5,7 @@ import Languages from './languages';
 import Proficiences from './proficiencies';
 import Skills from './skills';
 
+import '../css/characterInfo.css';
 import '../css/toggleDisplay.css';
 
 class CharacterInfo extends Component {
@@ -27,8 +28,8 @@ class CharacterInfo extends Component {
   render() {
     return (
       <div className="character-info-container">
-        <div className="gm-header">
-          <h2 onClick={() => this.toggleDisplay()}>Character Information</h2>
+        <div className="char-info-header" onClick={() => this.toggleDisplay()}>
+          <h2>Character Information</h2>
           <p>&#8964;</p>
         </div>
         <div className={(this.state.display) ? "expanded" : "hidden"}>
