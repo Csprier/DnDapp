@@ -1,10 +1,34 @@
 .dashboard {
-  margin: 0px;
+  margin: 0px 0px 0px 0px;
   padding: 0px 0px 0px 0px;
-  background-color: whitesmoke;
 }
 
-.dashboard ul {
+.scroll-menu {
+  margin: 0px 0px 0px 0px;
+  padding: 5px 0px 5px 0px;
+  display: flex;
+  overflow: auto;
+  white-space: nowrap;
+  background-color: black;
+}
+
+.menuitem {
+  padding: 0px;
+  margin: 0px 10px 0px 10px;
+  border: 1px solid goldenrod;
+  border-radius: 5px;
+  background-color: gray;
+}
+
+.menuitem h3 {
+  width: 150px;
+  padding: 10px;
+  margin: 0px;
+  text-align: center;
+}
+
+
+/* .dashboard ul {
   margin: 0px 0px 10px 0px;
   padding: 0px;
 }
@@ -30,7 +54,6 @@
   margin: 0px;
   padding: 15px 0px 15px 15px;
   color: goldenrod;
-  /* border-bottom: goldenrod; */
 }
 
 .dashboard h3 {
@@ -38,5 +61,4 @@
   padding: 15px 0px 15px 15px;
   color: goldenrod;
   background-color: #6b6b6b;
-  /* border-bottom: goldenrod; */
-}
+} */

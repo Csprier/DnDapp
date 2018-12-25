@@ -6,6 +6,7 @@ import Traits from './traits';
 
 import '../css/toggleDisplay.css';
 import '../css/racesInfo.css';
+import '../css/dashboard.css';
 
 class RacesInfo extends Component {
   constructor() {
@@ -26,10 +27,10 @@ class RacesInfo extends Component {
   
   render() {
     return (
-      <div className="races-info-container">
+      <div className="races-info-container menuitem">
         <div className="races-info-header" onClick={() =>this.toggleDisplay()}>
-          <h2>Races Information</h2>
-          <p>&#8964;</p>
+          <h3>Races</h3>
+          {/* <p>&#8964;</p> */}
         </div>
         <div className={(this.state.display) ? "expanded" : "hidden"}>
           <Races />

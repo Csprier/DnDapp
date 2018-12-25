@@ -8,6 +8,7 @@ import StartingEquipment from './startingEquipment';
 
 import '../css/classesInfo.css';
 import '../css/toggleDisplay.css';
+import '../css/dashboard.css';
 
 class ClassesInfo extends Component {
   constructor() {
@@ -28,10 +29,10 @@ class ClassesInfo extends Component {
 
   render() {
     return (
-      <div className="classes-info-container">
+      <div className="classes-info-container menuitem">
         <div className="classes-info-header" onClick={() =>this.toggleDisplay()}>
-          <h2>Classes Information</h2>
-          <p>&#8964;</p>
+          <h3>Classes</h3>
+          {/* <p>&#8964;</p> */}
         </div>
         <div className={(this.state.display) ? "expanded" : "hidden"}>
           <Classes />

@@ -4,6 +4,7 @@ import Equipment from './equipment';
 
 import '../css/equipmentInfo.css';
 import '../css/toggleDisplay.css';
+import '../css/dashboard.css';
 
 class EquipmentInfo extends Component {
   constructor() {
@@ -24,10 +25,10 @@ class EquipmentInfo extends Component {
 
   render() {
     return (
-      <div className="equipment-info-container">
+      <div className="equipment-info-container menuitem">
         <div className="classes-info-header" onClick={() =>this.toggleDisplay()}>
-          <h2>Equipment</h2>
-          <p>&#8964;</p>
+          <h3>Equipment</h3>
+          {/* <p>&#8964;</p> */}
         </div>
         <div className={(this.state.display) ? "expanded" : "hidden"}>
           <Equipment />

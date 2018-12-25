@@ -7,6 +7,7 @@ import Skills from './skills';
 
 import '../css/characterInfo.css';
 import '../css/toggleDisplay.css';
+import '../css/dashboard.css';
 
 class CharacterInfo extends Component {
   constructor() {
@@ -27,10 +28,10 @@ class CharacterInfo extends Component {
 
   render() {
     return (
-      <div className="character-info-container">
+      <div className="character-info-container menuitem">
         <div className="char-info-header" onClick={() => this.toggleDisplay()}>
-          <h2>Character Information</h2>
-          <p>&#8964;</p>
+          <h3>Character</h3>
+          {/* <p>&#8964;</p> */}
         </div>
         <div className={(this.state.display) ? "expanded" : "hidden"}>
           <AbilityScores />

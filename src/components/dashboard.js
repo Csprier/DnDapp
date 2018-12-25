@@ -6,18 +6,19 @@ import EquipmentInfo from './equipmentInfo';
 import GameMechanics from './gameMechanics';
 import RacesInfo from './racesInfo';
 
-
 import '../css/dashboard.css';
 
 class Dashboard extends Component {
   render() {
     return (
       <div className="dashboard">
-        <GameMechanics />
-        <CharacterInfo />
-        <ClassesInfo />
-        <RacesInfo />
-        <EquipmentInfo />
+        <div className="scroll-menu">
+          <GameMechanics />
+          <CharacterInfo />
+          <ClassesInfo />
+          <RacesInfo />
+          <EquipmentInfo />
+        </div>
       </div>
     );
   }
